@@ -66,34 +66,59 @@
                 <div class="divider"></div>
                 <p>Recent tower erection and infrastructure projects</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/rooftop-antenna-installation.jpg" alt="Professional technicians installing telecom antenna on rooftop with safety equipment" loading="lazy">
-                    <div class="gallery-caption">Rooftop Antenna Installation</div>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slide active">
+                        <img src="images/rooftop-antenna-installation.jpg" alt="Professional technicians installing telecom antenna on rooftop with safety equipment" loading="lazy">
+                        <div class="slide-caption">Rooftop Antenna Installation</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/painted-tower.jpg" alt="Completed telecom tower with red and white aviation paint and mounted antennas" loading="lazy">
+                        <div class="slide-caption">Completed Telecom Tower</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/lattice-tower.jpg" alt="Steel lattice telecommunication tower installation" loading="lazy">
+                        <div class="slide-caption">Steel Lattice Tower</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/telecom-tower-shelter.jpg" alt="Complete telecom site with tower and equipment shelter" loading="lazy">
+                        <div class="slide-caption">Tower with Equipment Shelter</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/tower-foundation.jpg" alt="Concrete foundation work for telecom tower installation" loading="lazy">
+                        <div class="slide-caption">Tower Foundation Construction</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/foundation-reinforcement.jpg" alt="Workers laying reinforcement mesh for tower foundation" loading="lazy">
+                        <div class="slide-caption">Foundation Reinforcement Work</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/civil-construction.jpg" alt="Civil construction site preparation with excavator equipment" loading="lazy">
+                        <div class="slide-caption">Site Preparation & Civil Works</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/stock-telecom-tower-1.jpg" alt="Professional telecom tower infrastructure" loading="lazy">
+                        <div class="slide-caption">Telecom Tower Infrastructure</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/stock-transmission-lines.jpg" alt="Electrical transmission lines and power infrastructure" loading="lazy">
+                        <div class="slide-caption">Transmission & Distribution Lines</div>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/painted-tower.jpg" alt="Completed telecom tower with red and white aviation paint and mounted antennas" loading="lazy">
-                    <div class="gallery-caption">Completed Telecom Tower</div>
+                <div class="slider-nav">
+                    <button class="nav-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+                    <button class="nav-btn next-btn" onclick="changeSlide(1)">❯</button>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/lattice-tower.jpg" alt="Steel lattice telecommunication tower installation" loading="lazy">
-                    <div class="gallery-caption">Steel Lattice Tower</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/telecom-tower-shelter.jpg" alt="Complete telecom site with tower and equipment shelter" loading="lazy">
-                    <div class="gallery-caption">Tower with Equipment Shelter</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/tower-foundation.jpg" alt="Concrete foundation work for telecom tower installation" loading="lazy">
-                    <div class="gallery-caption">Tower Foundation Construction</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/foundation-reinforcement.jpg" alt="Workers laying reinforcement mesh for tower foundation" loading="lazy">
-                    <div class="gallery-caption">Foundation Reinforcement Work</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/civil-construction.jpg" alt="Civil construction site preparation with excavator equipment" loading="lazy">
-                    <div class="gallery-caption">Site Preparation & Civil Works</div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
                 </div>
             </div>
         </div>
@@ -110,8 +135,18 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">📡</div>
-                    <h3>Wireless Communication Networks</h3>
-                    <p>Complete RF Survey, LOS Survey, Engineering Services, I&C Services for BTS (GSM/CDMA/3G/4G/IBS), Micro Wave installation, BSC/XCDR/RNC services, and In Building Solutions (IBS).</p>
+                    <h3>Telecom Infrastructure Services</h3>
+                    <p>Complete telecom infrastructure solutions including site survey (BTS/LOS/IBS), foundation works, tower erection, power equipment installation, GSM/CDMA BTS installation & commissioning, de-installation & upgrading, microwave hops alignment, and MSC/BSC/STP equipment installation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Transmission & Distribution</h3>
+                    <p>Complete T&D services including transmission line surveys, route alignment, tower spotting, foundation & tower protection works, tower earthing & erection, conductor stringing, OPGW and earth wire stringing (including live line), and final checking & commissioning.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Inspection Services</h3>
+                    <p>Comprehensive inspection services for transmission line materials, towers, conductors, OPGW, hardware, accessories, earthing materials, site inspections, foundation works, tower erection inspection, stringing inspection, and complete site auditing.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🌐</div>
@@ -124,19 +159,9 @@
                     <p>Installation and Commissioning of MSAN Equipment's, Switches, MUX and Routers. OFC and Copper network deployment, voice and DSL migration, and MDF termination services.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏗️</div>
-                    <h3>Civil & Passive Infrastructure</h3>
-                    <p>Construction of Towers/Masts/Poles up to 55 meters, Shelters, DG Sets, Power equipment, Air Conditioners, Tower Foundation, Lightning solutions, and AC/DC electrical systems.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Operations & Maintenance</h3>
-                    <p>O&M Support for DG Sets/PIU/AMF/AC, BTS/BSC/MSC maintenance, WIFI Network maintenance, Testing and Optimization, RF Site Integration, and 24/7 monitoring services.</p>
-                </div>
-                <div class="service-card">
                     <div class="service-icon">📋</div>
                     <h3>Project Management Services</h3>
-                    <p>Turnkey Implementation Management, Roll-Out Management, Quality Assurance, Risk Management, Documentation, Milestone reporting, and complete project lifecycle management.</p>
+                    <p>End-to-end project management from site survey to integration. Design review & approvals, scheduling, procurement management, site implementation, quality assurance, OHSE compliance, scope management, and statutory clearance assistance.</p>
                 </div>
             </div>
         </div>
@@ -279,7 +304,9 @@
                         <div class="contact-icon">📧</div>
                         <div>
                             <h4>Email</h4>
-                            <a href="mailto:nareshandco@yahoo.com">nareshandco@yahoo.com</a>
+                            <a href="mailto:nareshandco@yahoo.com">nareshandco@yahoo.com</a><br>
+                            <a href="mailto:sivam@nareshandco.co.in">sivam@nareshandco.co.in</a><br>
+                            <a href="mailto:muthazhagupandian@nareshandco.co.in">muthazhagupandian@nareshandco.co.in</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -287,6 +314,7 @@
                         <div>
                             <h4>Phone</h4>
                             <a href="tel:+919884056221">+91 98840 56221</a><br>
+                            <a href="tel:+917299025588">+91 72990 25588</a><br>
                             <a href="tel:+914425726411">044 – 25726411</a>
                             <p style="margin-top: 5px; font-size: 0.9rem;">Contact: Sivam (Director)</p>
                         </div>
@@ -324,7 +352,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Naresh & Co. All rights reserved. | ISO 9001:2015 Certified</p>
-            <p>718/3, T.H Road, Thiruvottiyur, Chennai 600019 | Phone: +91 98840 56221, 044 – 25726411 | GST: 33ANLPS8411K2ZL</p>
+            <p>718/3, T.H Road, Thiruvottiyur, Chennai 600019 | Phone: +91 98840 56221, +91 72990 25588, 044 – 25726411 | GST: 33ANLPS8411K2ZL</p>
             <p>Telecommunication Infrastructure | Tower Erection | EPC Services | O&M Services | Pan India Operations</p>
         </div>
     </footer>

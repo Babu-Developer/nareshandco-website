@@ -5,8 +5,8 @@ Professional website for Naresh & Co, offering end-to-end engineering solutions,
 ## Company Information
 - **Name:** Naresh and Co
 - **Address:** 718/3, T.H Road, Thiruvottiyur, Chennai 600019
-- **Email:** nareshandco@yahoo.com
-- **Phone:** +91 98840 56221, 044 – 25726411
+- **Email:** nareshandco@yahoo.com, sivam@nareshandco.co.in, muthazhagupandian@nareshandco.co.in
+- **Phone:** +91 98840 56221, +91 72990 25588, 044 – 25726411
 - **Contact Person:** Sivam (Director)
 - **GST:** 33ANLPS8411K2ZL
 

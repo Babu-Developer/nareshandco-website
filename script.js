@@ -92,3 +92,79 @@ document.querySelectorAll('.service-card, .feature, .contact-item').forEach(el =
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+// Auto-Sliding Project Gallery
+let currentSlideIndex = 0;
+let autoSlideInterval;
+
+// Initialize slider when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+    
+    if (totalSlides === 0) return; // Exit if no slides found
+    
+    // Auto slide function
+    function autoSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+        showSlide(currentSlideIndex);
+    }
+    
+    // Show specific slide
+    function showSlide(index) {
+        // Remove active class from all slides and dots
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Add active class to current slide and dot
+        if (slides[index]) slides[index].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
+    }
+    
+    // Manual slide navigation
+    window.changeSlide = function(direction) {
+        currentSlideIndex += direction;
+        
+        if (currentSlideIndex >= totalSlides) {
+            currentSlideIndex = 0;
+        } else if (currentSlideIndex < 0) {
+            currentSlideIndex = totalSlides - 1;
+        }
+        
+        showSlide(currentSlideIndex);
+        resetAutoSlide();
+    }
+    
+    // Go to specific slide
+    window.currentSlide = function(index) {
+        currentSlideIndex = index - 1;
+        showSlide(currentSlideIndex);
+        resetAutoSlide();
+    }
+    
+    // Start auto-slide
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(autoSlide, 4000); // Change slide every 4 seconds
+    }
+    
+    // Stop auto-slide
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+    
+    // Reset auto-slide (restart timer)
+    function resetAutoSlide() {
+        stopAutoSlide();
+        startAutoSlide();
+    }
+    
+    // Pause auto-slide on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+    }
+    
+    // Start the auto-slide
+    startAutoSlide();
+});
