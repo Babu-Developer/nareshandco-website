@@ -211,38 +211,45 @@ section {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 40px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: var(--bg-light);
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 250px;
+    height: 320px;
     object-fit: cover;
+    object-position: center;
     display: block;
+    image-rendering: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .gallery-caption {
-    padding: 15px;
+    padding: 18px;
     background: var(--white);
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-dark);
+    font-size: 1rem;
 }
 
 /* Services Section */
@@ -290,6 +297,53 @@ section {
 /* Why Choose Us */
 .why-choose {
     background: var(--white);
+    padding: 80px 0;
+}
+
+.capabilities-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.capability-section {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.capability-section h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.capability-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.capability-section ul li {
+    color: var(--text-light);
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.capability-section ul li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.why-choose-highlights {
+    background: var(--bg-light);
 }
 
 .features-grid {
@@ -312,6 +366,45 @@ section {
 
 .feature p {
     color: var(--text-light);
+}
+
+/* Customers Section */
+.customers {
+    background: var(--bg-light);
+}
+
+.customers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.customer-card {
+    background: var(--white);
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.customer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.customer-card h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.customer-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* Contact Section */
@@ -463,7 +556,15 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .capabilities-content {
+        grid-template-columns: 1fr;
+    }
+
     .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .customers-grid {
         grid-template-columns: 1fr;
     }
 
